@@ -1,52 +1,69 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<!--Linguagem local-->
+<h lang="pt-br">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos.css">
-    <title>Pousada Recanto da Natureza</title>
-</head>
-<header>
-    <img src="logo.jpg" alt="Logo da Pousada" width="120" height="90" id="logo1">
-    <img src="logo2.jpeg" alt="Logo da Pousada" width="120" height="90" id="logo2">
-    <nav>
-        <ul>
-            <li><a href="#hospedagem">Hospedagem</a></li>
-            <li><a href="#reservas">Reservas</a></li>
-            <li><a href="#mapa">Localização</a></li>
-            <li><a href="#contato">Contato</a></li>
-        </ul>
-    </nav>
-
-</header>
-
-<body>
-    <article>
-        <h1>Pousada Recanto da Natureza</h1>
-        <img src="pousada1.jpg" alt="Pousada" class="pousada1" id="pousada1">
-        <img src="pousada2.jpg" alt="Pousada2" class="pousada2" id="pousada2">
-        <h2>Tradição e qualidade no recanto da cidade de Pelotas / RS</h2>
-        <p>Há quase 20 anos atendendo nossos clientes com compromisso e responsabilidade,
-        </p>
-        <p>Traga a sua família para ter bons momentos e aproveitar a naturezza!</p>
-        <section id="hospedagem">
-            <h2>Nossas Hospedagens</h2>
-            <ul>
-                <img src="quarto1.png" alt="quarto1"></li>
-                <img src="quarto2.jpg" alt="quarto2"></li>
-                <img src="quarto3.jpg" alt="quarto3"></li>
-                <img src="quarto4.jpg" alt="quarto4"></li>
-
-            </ul>
-
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilos.css">
+        <title>Recando da Natureza</title>
+    </head>
+    <header class="Cabecalho">
+        <section class="Navbar">
+            <div class="logo1">
+                <!--logo desktop-->
+                <img class="logo__img" src="logo.jpg">
+            </div>
+            <!--logo mobile-->
+            <div class="logo2">
+                <img src="logo2__img.jpeg">
+            </div>
+            <nav class="nav__link">
+                <ul>
+                    <li><a href="#hospedagem">Hospedagem</a></li>
+                    <li><a href="#reservas">Reservas</a></li>
+                    <li><a href="#mapa">Localização</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
         </section>
-        <section id="reservas">
-            <H2>Tabela de Preços</H2>
+    </header>
 
-            <table>
-                <thead>
+    <body>
+        <!--Corpo, container da descrição-->
+        <container class="container__principal">
+            <!--Corpo de apresentação principal-->
+            <section class="apresentacao">
+                <h1 class="titulo">Pousada Recanto da Natureza</h1>
+                <h2 class="descricao">Tradição e qualidade no recanto da cidade de Pelotas / RS</h2>
+                <p class="txt__descricao1">Há quase 20 anos atendendo nossos clientes com compromisso e
+                    responsabilidade,
+                </p>
+                <p class="txt__descricao2">Traga a sua família para ter bons momentos e aproveitar a naturezza!</p>
+                <!--Imgs de apresentação-->
+                <div class="imgs__principais">
+                    <img class="img__pousada1" src="pousada1.jpg">
+                    <img class="img__pousada2" src="pousada2.jpg">
+                </div>
+            </section>
+            <!--Sessão das hospedagens-->
+            <section class="hospedagens">
+                <div class="titulo__hospedagens">
+                    <h2>Nossas Hospedagens</h2>
+                </div>
+                <div class="img__hospedagens">
+                    <img class="img__quartos" src="quarto1.png"></li>
+                    <img class="img__quartos" src="quarto2.jpg"></li>
+                    <img class="img__quartos" src="quarto3.jpg"></li>
+                    <img class="img__quartos" src="quarto4.jpg"></li>
+                </div>
+            </section>
+        </container>
+        <!--Tabela de preços-->
+        <container class="reservas">
+            <section class="tabela__precos">
+                <H2>Tabela de Preços</H2>
+                <table>
                     <tr>
                         <th>Quarto Casal</th>
                         <th>Quarto 3 Pessoas</th>
@@ -54,25 +71,18 @@
                         <th>Quarto Standart Natureza</th>
                     </tr>
 
-                </thead>
-                <tr>
-                    <td>R$100,00</td>
-                    <td>R$200,00</td>
-                    <td>R$150,00</td>
-                    <td>R$300,00</td>
-                </tr>
-                <tbody>
-
-                </tbody>
-                <tfoot>
                     <tr>
-                        <td colspan="4">Obs.:Consultar disponibilidade.</td>
+                        <td>R$100,00</td>
+                        <td>R$200,00</td>
+                        <td>R$150,00</td>
+                        <td>R$300,00</td>
                     </tr>
-
-                </tfoot>
-            </table>
-            <h2>Faça Sua Reserva Aqui</h2>
-            <form action="">
+                </table>
+                <p>Obs.:Consultar disponibilidade.</p>
+            </section>
+            <!--Formulário de reserva-->
+            <form class="formulario">
+                <h2>Faça Sua Reserva Aqui</h2>
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" placeholder="Nome Completo" required>
 
@@ -90,24 +100,21 @@
                 </select>
                 <input type="submit" value="Confirmar Reserva">
             </form>
-        </section>
-        <section id="mapa">
+            </section>
+        </container>
+        <section class="mapa">
             <h2>Nossa Localização</h2>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.6133526131052!2d-52.231228585121336!3d-31.753753119827795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b22a2bb7dd97%3A0xfc1e0942d8b7e19e!2sPousada%20Laranjal!5e0!3m2!1spt-BR!2sbr!4v1650505176431!5m2!1spt-BR!2sbr"
                 width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
-        <section id="contato">
-            <h2>Fale Conosco</h2>
-            <h2>Pousada Recanto da Natureza</h2>
-            <p>Telefone:(53)36656355</p>
-            <p>E-mail:recantodanatureza@gmail.com</p>
+    </body>
+    <footer class="contato">
+        <h2>Fale Conosco</h2>
+        <h2>Pousada Recanto da Natureza</h2>
+        <p>Telefone:(53)36656355</p>
+        <p>E-mail:recantodanatureza@gmail.com</p>
+    </footer>
 
-
-        </section>
-    </article>
-</body> 
-
-
-</html>
+    </html>
