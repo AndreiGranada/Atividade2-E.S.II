@@ -1,0 +1,193 @@
+body {
+    background-color: rgb(89, 138, 101);
+}
+
+header {
+    background-color: #fbfeff;
+    position: relative;
+    ;
+}
+
+nav {
+    position: absolute;
+    top: 25px;
+    right: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 15px;
+}
+
+nav ul li a {
+    text-transform: uppercase;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: rgb(249, 255, 252);
+}
+
+nav {
+    position: absolute;
+    top: 25px;
+    right: 0;
+}
+
+h1 {
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    text-align: center
+}
+
+img.pousada1 {
+    width: 80%;
+    display: block;
+    margin: auto;
+    top: 25px;
+    right: 0;
+}
+
+img.pousada2 {
+    width: 75%;
+    display: block;
+    margin: auto;
+    top: 25px;
+    right: 0;
+}
+
+#hospedagem img {
+    width: 600px;
+    aspect-ratio: auto 600 / 250;
+    height: 250px;
+    margin: auto;
+}
+
+article,
+h2 {
+    text-align: center;
+}
+
+label,
+input[type="submit"] {
+    display: block;
+    /* margin: 12px 0 3px 0; */
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin: auto;
+}
+
+article input,
+article select {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    outline: none;
+    border-bottom-color: rgb(113, 201, 135);
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+}
+
+article input:focus,
+article select:focus {
+    border-bottom-color: orange;
+}
+
+input[type="submit"] {
+    background-color: rgb(31, 116, 63);
+    color: rgb(242, 247, 243);
+    font-weight: bold;
+    /* border-radius: 8px 0 8px 0; */
+    border-radius: 8px 0;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(2, 110, 51);
+    color: rgb(49, 223, 5);
+    cursor: pointer;
+}
+
+
+#reservas {
+    background-color: rgb(113, 201, 135);
+    width: 100%;
+    max-width: 340px;
+    margin: auto;
+    /* faz com que o elemento (de bloco) fique centralizado */
+    /* overflow: hidden; */
+    padding: 20px;
+    border-radius: 20px;
+}
+
+p {
+    text-align: center;
+}
+
+table {
+    width: 80%;
+    margin: auto;
+    border: 1px solid #03304e;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #03304e;
+    padding: 10px;
+}
+
+thead>tr {
+    border-bottom: 3px solid red;
+}
+
+tbody td {
+    text-align: center;
+}
+
+nav ul {
+    background-color: #82d3a4;
+    list-style: none;
+    margin: 0px;
+    padding: 20px;
+    text-align: right;
+}
+
+header img#logo2 {
+    display: none;
+}
+
+
+@media screen and (max-width: 900px) {
+    body {
+        background-color: rgb(84, 204, 28);
+    }
+
+    header img#logo1 {
+        display: none;
+    }
+
+    header img#logo2 {
+        display: inline;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        background-color: khaki;
+    }
+
+    header {
+        background-color: rgb(31, 116, 63);
+    }
+
+    article img#pousada1 {
+        display: inline;
+    }
+
+    article img#pousada2 {
+        display: none;
+    }
+}
