@@ -1,193 +1,148 @@
-body {
-    background-color: rgb(89, 138, 101);
+/* Deixa geral de navegadores com espaçamentos iniciais 0*/
+* {
+    margin: 0;
+    padding: 0;
 }
-
-header {
-    background-color: #fbfeff;
-    position: relative;
-    ;
-}
-
-nav {
-    position: absolute;
-    top: 25px;
-    right: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-left: 15px;
-}
-
-nav ul li a {
-    text-transform: uppercase;
-    color: #000;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    color: rgb(249, 255, 252);
-}
-
-nav {
-    position: absolute;
-    top: 25px;
-    right: 0;
-}
-
-h1 {
-    font-size: 1.5em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    text-align: center
-}
-
-img.pousada1 {
-    width: 80%;
-    display: block;
-    margin: auto;
-    top: 25px;
-    right: 0;
-}
-
-img.pousada2 {
-    width: 75%;
-    display: block;
-    margin: auto;
-    top: 25px;
-    right: 0;
-}
-
-#hospedagem img {
-    width: 600px;
-    aspect-ratio: auto 600 / 250;
-    height: 250px;
-    margin: auto;
-}
-
-article,
-h2 {
-    text-align: center;
-}
-
-label,
-input[type="submit"] {
-    display: block;
-    /* margin: 12px 0 3px 0; */
-    margin-top: 12px;
-    margin-bottom: 12px;
-    margin: auto;
-}
-
-article input,
-article select {
+header{
     width: 100%;
-    padding: 8px;
-    border: none;
-    outline: none;
-    border-bottom-color: rgb(113, 201, 135);
-    border-bottom-style: solid;
-    border-bottom-width: 2px;
+}
+/* componetes cabecalho lado a lado do navbar*/
+.Navbar {
+    display: flex;
+    justify-content: space-between;
 }
 
-article input:focus,
-article select:focus {
-    border-bottom-color: orange;
-}
-
-input[type="submit"] {
-    background-color: rgb(31, 116, 63);
-    color: rgb(242, 247, 243);
-    font-weight: bold;
-    /* border-radius: 8px 0 8px 0; */
-    border-radius: 8px 0;
-}
-
-input[type="submit"]:hover {
-    background-color: rgb(2, 110, 51);
-    color: rgb(49, 223, 5);
-    cursor: pointer;
-}
-
-
-#reservas {
-    background-color: rgb(113, 201, 135);
-    width: 100%;
-    max-width: 340px;
-    margin: auto;
-    /* faz com que o elemento (de bloco) fique centralizado */
-    /* overflow: hidden; */
-    padding: 20px;
-    border-radius: 20px;
-}
-
-p {
-    text-align: center;
-}
-
-table {
-    width: 80%;
-    margin: auto;
-    border: 1px solid #03304e;
-    border-collapse: collapse;
-}
-
-th,
-td {
-    border: 1px solid #03304e;
-    padding: 10px;
-}
-
-thead>tr {
-    border-bottom: 3px solid red;
-}
-
-tbody td {
-    text-align: center;
-}
-
-nav ul {
-    background-color: #82d3a4;
+/*leyout links navbar*/
+.nav__link,
+ul,
+li,
+a {
     list-style: none;
-    margin: 0px;
-    padding: 20px;
-    text-align: right;
+    display: flex;
+    padding: 15px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
 }
 
-header img#logo2 {
+/* definição primeiro logo desk*/
+.logo__img {
+    width: 100px;
+    height: 100px;
+}
+
+/*logo 2 p/ mobile, desk n aparece*/
+.logo__img2 {
     display: none;
 }
-
-
-@media screen and (max-width: 900px) {
-    body {
-        background-color: rgb(84, 204, 28);
-    }
-
-    header img#logo1 {
-        display: none;
-    }
-
-    header img#logo2 {
-        display: inline;
-    }
+/* ponteiro mouse cor ao passar acima do link */
+nav ul li a:hover {
+    color: red
+}
+/* alinhamento do texto no centro */
+.apresentacao {
+    text-align: center;
+    padding-top: 25px;
 }
 
-@media screen and (max-width: 900px) {
-    body {
-        background-color: khaki;
-    }
+.titulo,
+.descricao,
+.txt__descricao1,
+.txt__descricao2 {
+    padding-top: 25px;
+}
+/* imgs principais da pusada lado a lado cemntralizadas */
+.imgs__principais {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+/* tamanhos de imagens */
+.img__pousada1, .img__pousada2 {
+    width: 50rem;
+    height: 25rem;
+}
 
-    header {
-        background-color: rgb(31, 116, 63);
-    }
+.txt__hospedagens {
+    padding-top: 25px;
+    text-align: center;
+    padding-bottom: 15px;
+}
 
-    article img#pousada1 {
-        display: inline;
-    }
+.img__quartos {
+    width: 20.5rem;
+    height: 20.5rem;
+    border: 10px solid black;
+    border-radius: 10px;
+}
+/*imagens de quartos em grid com duas colunas */
+.img__hospedagens {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto auto;
+    justify-content: center;
+}
+/*deficinção de alinhamento da tabela */
+.tabela__precos {
+    padding-top: 20px;
+    text-align: center;
+}
+/* deficições da tabela e seus componentes */
+table,
+th,
+td {
+    border: 1px solid black;
+    text-align: center;
+    margin: 0 auto;
+    padding: 3px;
+}
+/* estilização do formulario, form input e select e labels*/
+form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+    padding: 5px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: rgb(60, 113, 8);
+    border-radius: 10px;
+    border: 3px solid black;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
 
-    article img#pousada2 {
-        display: none;
-    }
+input {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+select {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 200px;
+    margin: 0 auto;
+}
+
+input[type="submit"] {
+    background-color: cornflowerblue;
+    width: 150px;
+    margin: 0 auto;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+/* definições para o mapa */
+.mapa {
+    margin-top: 20px;
+    text-align: center;
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+}
+/*definições para o rodapé */
+footer{
+    margin-top: 120px;
+    text-align: center;
 }
